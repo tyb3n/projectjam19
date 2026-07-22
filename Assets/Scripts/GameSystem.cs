@@ -1,56 +1,71 @@
 using UnityEngine;
-
+using System.Collections;
+using TMPro;
 public class GameSystem : MonoBehaviour
 {
     public GameObject DialogUI;
     public GameObject dialogdisplay;
-    int i = 0;
-    string[] dialogue;
+    public TextMeshProUGUI textComponent;
+
+    public string[] dialogue;
+    public float textSpeed;
+    private int index;
+    
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DialogUI.SetActive(false);
-        dialogue[0] = "Hello There!";
-        dialogue[1] = "General Kenobi!";
+        textComponent.text = string.Empty;
+        StartDialog();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void QuitGame()
-    {
-        // Ferme le jeu (ne fonctionne que dans le build, pas dans l'éditeur)
-        Application.Quit();
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (textComponent.text == dialogue[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = dialogue[index];
+            }
+        }
     }
 
     public void StartDialog()
     {
-        DialogUI.SetActive(true);
-        i = 0;
+        index = 0;
+        StartCoroutine(TypeLine());
     }
 
+    IEnumerator TypeLine()
+    {
+        foreach (char c in dialogue[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
     public void ShowStatus()
     {
-        
-    }
 
-    public void RunDialog()
+    }
+    void NextLine()
     {
-        if (dialogue[i] != null)
+        if (index < dialogue.Length - 1)
         {
-            Debug.Log(dialogue[i]);
-            dialogdisplay.GetComponent<TMPro.TextMeshProUGUI>().text = dialogue[i];
-            i++; 
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
         }
         else
         {
-            DialogUI.SetActive(false);
+            dialogdisplay.SetActive(false);
         }
-        
     }
 }
