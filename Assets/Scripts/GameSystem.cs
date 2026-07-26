@@ -13,8 +13,12 @@ public class GameSystem : MonoBehaviour
     public float textSpeed;
     private int index;
 
-    [SerializeField] private EventReference textScrollSoundEvent;
+    [SerializeField]
+    private EventReference textScrollSoundEvent;
     private EventInstance textScrollSoundInstance;
+
+    [SerializeField]
+    private EventReference textClickSoundEvent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +35,9 @@ public class GameSystem : MonoBehaviour
             if (textComponent.text == dialogue[index])
             {
                 NextLine();
+
+                // Play click sound
+                RuntimeManager.PlayOneShot(textClickSoundEvent);
             }
             else
             {
