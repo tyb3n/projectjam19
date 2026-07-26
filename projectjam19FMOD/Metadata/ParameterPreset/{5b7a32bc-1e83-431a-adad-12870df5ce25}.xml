@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{5b7a32bc-1e83-431a-adad-12870df5ce25}">
+		<property name="name">
+			<value>Hear_Afterlife</value>
+		</property>
+		<relationship name="folder">
+			<destination>{33d28c79-74a4-4bab-92e4-ac516d569ee2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ffc5314c-3173-42f5-baf6-e72ddbbde973}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ffc5314c-3173-42f5-baf6-e72ddbbde973}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Yes</value>
+			<value>No</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

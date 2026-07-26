@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{68e61638-825f-4a69-b07c-9fe63f9301e0}">
+		<property name="name">
+			<value>Read_Minds</value>
+		</property>
+		<relationship name="folder">
+			<destination>{33d28c79-74a4-4bab-92e4-ac516d569ee2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{dff16cb5-1948-450e-8256-474729bf09f2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{dff16cb5-1948-450e-8256-474729bf09f2}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Yes</value>
+			<value>No</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
