@@ -617,6 +617,13 @@ MonoBehaviour:
   - Hello There!
   - General Kenobi!
   textSpeed: 0.05
+  textSoundEvent:
+    Guid:
+      Data1: 1975498753
+      Data2: 1292448321
+      Data3: -1269245010
+      Data4: -727166158
+    Path: event:/UI_Text_Scroll
 --- !u!4 &532186962
 Transform:
   m_ObjectHideFlags: 0

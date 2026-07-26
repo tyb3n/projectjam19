@@ -1,6 +1,8 @@
-using UnityEngine;
+using FMODUnity;
 using System.Collections;
 using TMPro;
+using UnityEngine;
+using FMOD.Studio;
 public class GameSystem : MonoBehaviour
 {
     public GameObject DialogUI;
@@ -10,9 +12,10 @@ public class GameSystem : MonoBehaviour
     public string[] dialogue;
     public float textSpeed;
     private int index;
-    
 
-    
+    [SerializeField] private EventReference textScrollSoundEvent;
+    private EventInstance textScrollSoundInstance;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +36,10 @@ public class GameSystem : MonoBehaviour
             {
                 StopAllCoroutines();
                 textComponent.text = dialogue[index];
+
+                // Stop scrolling text sound
+                textScrollSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                textScrollSoundInstance.release();
             }
         }
     }
@@ -45,11 +52,21 @@ public class GameSystem : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+
+        // Start scrolling text sound
+        textScrollSoundInstance = RuntimeManager.CreateInstance(textScrollSoundEvent);
+        textScrollSoundInstance.start();
+
         foreach (char c in dialogue[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        // Stop scrolling text sound
+        textScrollSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        textScrollSoundInstance.release();
+
     }
     public void ShowStatus()
     {
