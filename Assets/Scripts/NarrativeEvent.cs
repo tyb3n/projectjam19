@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NarrativeEvent", menuName = "ScriptableObject/NarrativeEvent")]
+[CreateAssetMenu(fileName = "NarrativeEvent", menuName = "Scriptable Objects/NarrativeEvent")]
 public class NarrativeEvent : ScriptableObject
 {
 

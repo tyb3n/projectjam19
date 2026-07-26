@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a15ccf24ce60434b9135f93c836700f, type: 3}
+  m_Name: 1_Bridge
+  m_EditorClassIdentifier: Assembly-CSharp::NarrativeEvent
+  initialText: "Vous arr\xEAtez votre carriole. Vous vous trouvez devant un pont,
+    un homme se tient au milieu du passage et bloque l'unique chemin vers l'autre
+    c\xF4t\xE9 de la rive. Il porte une tunique verte, brod\xE9e d'un insigne royal
+    sur la poitrine."
+  abilityRequirements:
+  - requiredAbility: {fileID: 11400000, guid: 4152bff3ce0018d49b01dcfe0c1747b4, type: 2}
+    text: "Vous distinguez une d\xE9chirure sur le c\xF4t\xE9 gauche de sa tunique,
+      une t\xE2che sombre macule le tissu."
+  - requiredAbility: {fileID: 11400000, guid: 8727d4d3248842247b360a140ef9a7a8, type: 2}
+    text: "Son visage est ferm\xE9, mais vous d\xE9celez un l\xE9ger rictus au coin
+      de ses l\xE8vres."
+  - requiredAbility: {fileID: 11400000, guid: 48b6a080bc7b3224786ab1707382a66d, type: 2}
+    text: Vous entendez le clapotis de l'eau en contrebas. Le coin semble paisible.
+  - requiredAbility: {fileID: 11400000, guid: b56a4a2d7289bc7418035c21a5831cd2, type: 2}
+    text: "Aux effluves de la vase se d\xE9gage une l\xE9g\xE8re odeur d\xE9sagr\xE9able
+      qui vous pique doucement le nez."
+  - requiredAbility: {fileID: 11400000, guid: 5c6c88ae9d7aaff42aaf17fca1e4ccba, type: 2}
+    text: "L'homme vous annonce d'une voix forte : \xAB\_P\xE9age royal, c'est 5
+      pi\xE8ces pour passer\_\xBB"
+  - requiredAbility: {fileID: 11400000, guid: af263dc71cf49584aa0530b5e3faa1bf, type: 2}
+    text: Sur le panneau d'indication, vous voyez que prendre un autre chemin vous
+      rajoutera probablement un ou deux jours de voyage.
+  - requiredAbility: {fileID: 11400000, guid: a73e0cdf8a01359458a8e2562f0d7060, type: 2}
+    text: "Bien que la terre sableuse qui recouvre le sol ait \xE9t\xE9 retourn\xE9,
+      vous savez que des t\xE2ches de sang ont macul\xE9 cet endroit."
+  - requiredAbility: {fileID: 11400000, guid: 11323e897a921a043a020deee476d925, type: 2}
+    text: "Dans un pass\xE9 proche, vous voyez un autre homme monter la garde \xE0
+      cet endroit, avec une tunique identique, demander 1 pi\xE8ce \xE0 un voyageur."
+  - requiredAbility: {fileID: 11400000, guid: 3d1d992e282a4b14c81cfb14ebedce89, type: 2}
+    text: "En tendant l'oreille, vous distinguez non loin un r\xE2le inqui\xE9tant.
+      Comme une voix agonisante venant d'un autre monde."
+  - requiredAbility: {fileID: 11400000, guid: 0dd2aab1be80c7845b6521703715b9b9, type: 2}
+    text: "L'homme devant vous d\xE9gage une aura malveillante."
+  - requiredAbility: {fileID: 11400000, guid: 65c5399566e3570418a6407f7d2d91f0, type: 2}
+    text: "Vous sentez que l'homme dissimule quelque chose, 5 pi\xE8ces semblent
+      hors de prix."
+  - requiredAbility: {fileID: 11400000, guid: f33792b4ab36cac4faebaae8465a81c2, type: 2}
+    text: "\xAB\_Beaucoup de voyageurs passent par l\xE0, cette journ\xE9e s'annonce
+      bien rentable\_\xBB."
